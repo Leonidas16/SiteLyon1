@@ -1,0 +1,19 @@
+page_reglages:
+    path:     /reglages
+    defaults: { _controller: IDPlatformBundle:Annexe:reglages }
+
+page_contact:
+    path:     /contact
+    defaults: { _controller: IDPlatformBundle:Annexe:contact }
+    requirements:
+        _method:  GET
+
+page_index:
+    path:     /index
+    defaults: { _controller: IDPlatformBundle:Advert:index }
+
+page_infos:
+    path:     /infos
+    defaults: { _controller: IDPlatformBundle:Annexe:info }
+
+

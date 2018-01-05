@@ -1,0 +1,31 @@
+imports:
+    - { resource: config.yml }
+
+#doctrine:
+#    orm:
+#        metadata_cache_driver: apc
+#        result_cache_driver: apc
+#        query_cache_driver: apc
+
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            level: debug
+        console:
+            type: console
+            process_psr_3_messages: false
+
+l3_cas:
+    host: cas.univ-lyon1.fr                            # Cas Server
+    path: http://localhost:8000/                       # App path if not in root (eg. cas.test.com/cas)
+    port: 443                                          # Server port
+    ca: false                                          # SSL Certificate
+    handleLogoutRequest: true                          # Single sign out activation (default: false)
+    casLogoutTarget: http://localhost:8000/     # Redirect path after logout
+    force: true                                        # Allows cas check mode and not force, user : __NO_USER__ if not connected (If force f                                   # Allows cas check mode and not force, user : __NO_USER__ if not connected (If force false, Single sign out cant work).

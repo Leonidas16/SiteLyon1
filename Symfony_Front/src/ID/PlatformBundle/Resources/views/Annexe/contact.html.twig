@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Réglages</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% stylesheets
+    'bundles/idplatform/css/style.css'
+    'bundles/idplatform/css2/style.css'
+    %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+</head>
+
+
+<body>
+
+{% include 'IDPlatformBundle:Outils:bar.html.twig' %}
+{% include 'IDPlatformBundle:Outils:menu.html.twig' %}
+
+
+
+<section id="contact">
+    <div class="section-content">
+        <h1 class="section-header"><span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s">Aidez nous </span> à améliorer le Site</h1>
+    </div>
+    <div class="contact-section">
+        <div class="container" style="margin-top: -26px;">
+            <form>
+                <div class="col-md-6">
+                    <label for ="description"> Objet</label>
+                    <textarea  class="form-control" placeholder="Objet" style="height: 46px;"></textarea>
+                    <div class="form-group">
+                        <label for ="description"> Message</label>
+                        <textarea  class="form-control" id="description" placeholder="Inserez votre message..."></textarea>
+                    </div>
+                    <div style="margin-left: 805px;margin-top: -10px;">
+
+                        <a class="btn btn-primary" href="#" role="button"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;Envoyer</a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+</section>
+
+{% javascripts
+
+'bundles/idplatform/js/jquery.min.js'
+'bundles/idplatform/js/bootstrap.min.js'
+'bundles/idplatform/js/index.js'
+'bundles/idplatform/js/function.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+
+{% endjavascripts %}
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% include 'IDPlatformBundle:Outils:bar.html.twig' %}
+{% include 'IDPlatformBundle:Outils:menu.html.twig' %}
+
+
+<h1>Mon profil</h1>
+<div class="container" style="overflow-x: hidden;">
+    <div class="row my-2">
+        <div class="col-lg-8 order-lg-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="" data-target="#profile" data-toggle="tab" class="nav-link active">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" data-target="#notif" data-toggle="tab" class="nav-link">Notifications</a>
+                </li>
+            </ul>
+            <div class="tab-content py-4">
+                <div class="tab-pane active" id="profile">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="mt-2"></span>Informations utilisateur</h5>
+
+                            <div class="fos_user_user_show">
+                                <p style="color:dimgray;text-align: left; margin-left:20px;">Nom :  {{ app.user.nom }} </p>
+                                <p style="color:dimgray;text-align: left; margin-left:20px;">Prénom :  {{ app.user.prenom }} </p>
+                                <p style="color:dimgray;text-align: left; margin-left:20px;">Email :  {{ app.user.email }} </p>
+                            </div>
+
+                            <h5 class="mt-2"></span> Activité récente</h5>
+                            <br>
+                            <h6>Description </h6>
+                            <p style="color:dimgray;text-align: left; margin-left:20px;" >
+                                Administrateur Systèmes et Réseaux, Designer UI/UX
+                            </p>
+                            <h6>Hobbies</h6>
+                            <p style="color:dimgray;text-align: left; margin-left:20px;" >
+                                Test
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Recent badges</h6>
+                            <a href="#" class="badge badge-dark badge-pill">html5</a>
+                            <a href="#" class="badge badge-dark badge-pill">angularjs</a>
+                            <a href="#" class="badge badge-dark badge-pill">css3</a>
+                            <a href="#" class="badge badge-dark badge-pill">jquery</a>
+                            <a href="#" class="badge badge-dark badge-pill">bootstrap</a>
+                            <a href="#" class="badge badge-dark badge-pill">responsive-design</a>
+                            <hr>
+                        </div>
+                        <div class="col-md-12">
+                            <h5 class="mt-2"><span class="fa fa-clock-o ion-clock float-right"></span> Activité récente</h5>
+                            <table class="table table-sm table-hover table-striped">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <strong>{{ app.user.prenom }}</strong> vient d'ajouter <strong>`LIFPROJET`</strong>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--/row-->
+                </div>
+                <div class="tab-pane" id="notif">
+                    <div class="alert alert-info alert-dismissable">
+                        <a class="panel-close close" data-dismiss="alert">×</a> Ceci est une <strong>.alerte</strong>. à Utiliser pour afficher des alertes importantes.
+                    </div>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="float-right font-weight-bold">Il y'a 3h</span> Exemple de notification.
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 order-lg-1 text-center">
+            <img src="{{ asset('bundles/idplatform/images/avatar.png') }}" class="mx-auto img-fluid img-circle d-block" alt="avatar">
+            <h6 class="mt-2">Chargez une autre photo</h6>
+            <label class="custom-file">
+                <input type="file" id="file" class="custom-file-input">
+                <span class="custom-file-control"><p style="color: black;font-size: 24px;margin-top: -8px;margin-left: 2px;">Choisir un fichier</p></span>
+            </label>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Réglages</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% stylesheets
+    'bundles/idplatform/css/style.css'
+    'bundles/idplatform/css/reglages.css'
+    'bundles/idplatform/css/styleFormInscription.css'
+    'bundles/idplatform/css2/style.css'
+    %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+
+</head>
+
+
+<body>
+
+{% include 'IDPlatformBundle:Outils:bar.html.twig' %}
+{% include 'IDPlatformBundle:Outils:menu.html.twig' %}
+
+<div class="container">
+<h1 style="margin-left: -950px;/*! margin-top: -71px; */">Mon compte</h1>
+
+<h3 id="d">Modifier mes informations</h3>
+<ul style="margin-left: -46px;">
+    <li id="d">Adresse mail <a id="s2" href="{{ path('fos_user_profile_edit') }}">Modifier</a></li>
+    <li id="d">Mot de passe <a id="s3" href="{{ path('fos_user_change_password') }}">Modifier</a></li>
+
+</ul>
+    <ul>
+<h3 id="g1" style="margin-top: -281px; margin-left:520px;">Assistance clientèle</h3>
+    <li id="d" style="margin-left: 528px;margin-top: 67px; text-decoration: none;  list-style-type: none; ">Reclamations <a id="s2" href="{{ path('page_contact') }}">Contacter</a></li>
+    </ul>
+</div>
+{% javascripts
+
+'bundles/idplatform/js/jquery.min.js'
+'bundles/idplatform/js/bootstrap.min.js'
+'bundles/idplatform/js/index.js'
+'bundles/idplatform/js/function.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+
+{% endjavascripts %}
+
+</body>
+
+</html>

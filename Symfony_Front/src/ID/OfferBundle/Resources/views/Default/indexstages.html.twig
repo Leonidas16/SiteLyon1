@@ -1,0 +1,103 @@
+
+{% block content %}
+    {% block body %}
+
+        <div class="container-fluid">
+        <div class="grid" style="margin-left: 51px;margin-top: -975px;">
+            {% for offer in stages %}
+                <figure class="effet" style="border-style: solid;border-color: #0275d8;transform: scale(0.9);">
+                    <img src="{{ asset('bundles/idplatform/images/25.jpg') }}" alt="images/img25"/>
+                    <figcaption>
+                        <h2><p id="she" style="margin-top: 0px;color: black;font-size: 14px; text-transform: capitalize;">{{ offer.title }}</p></h2>
+                        <p class="description" style="margin-top:20px;">
+                            <a data-toggle="modal" data-target="#exampleModalLong" id="modal-advert" style="text-decoration:bold; color:darkslategrey; font-size:25px; ">
+                                Ouvrir l'annonce
+                            </a>
+                        </p>
+                    </figcaption>
+                </figure>
+            {% endfor %}
+        </div>
+
+
+    {% endblock %}
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="margin-top: 127px;">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <!--Carousel Wrapper-->
+                            <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+
+                                <!--Slides-->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="carousel-item active">
+                                        <img src="{{ asset('bundles/idplatform/images/25.jpg') }}"  alt="First slide">
+                                    </div>
+                                </div>
+                                <!--/.Slides-->
+
+                            </div>
+                            <!--/.Carousel Wrapper-->
+                        </div>
+                        <div class="col-lg-7">
+                            <h2 class="h2-responsive product-name"><strong>Test</strong></h2>
+                            <!--Accordion wrapper-->
+                            <div class="accordion" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingOne">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <h5 class="mb-0">
+                                                Description <i class="fa fa-angle-down rotate-icon"></i>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="card-body">
+                                            Description de l'annonce
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingTwo">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <h5 class="mb-0">
+                                                Contrat <i class="fa fa-angle-down rotate-icon"></i>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="card-body">
+                                            Type de contrat
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" role="tab" id="headingThree">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <h5 class="mb-0">
+                                                Rémunération <i class="fa fa-angle-down rotate-icon"></i>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="card-body">
+                                            0 à 14 K€
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Accordion wrapper-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}

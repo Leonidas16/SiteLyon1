@@ -1,0 +1,7 @@
+page_annonce:
+    path:     /annonce
+    defaults: { _controller: IDOfferBundle:Default:annonce }
+
+page_stage:
+    path:   /stages
+    defaults: { _controller: IDOfferBundle:Default:stage }

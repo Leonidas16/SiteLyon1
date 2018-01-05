@@ -1,0 +1,37 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<div class="container">
+<div class="form">
+    <h2 style="color: #fff9; margin-left:76px;margin-top: -26px;">Inscription</h2>
+    <a type="button" class="btn btn-outline-warning" href="{{ path('cas_connect') }}" role="button" style="margin-left: 86px;">Connexion CAS</a>
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {{ form_errors(form) }}
+
+    <div class="test">
+    <div style="padding-right: 175px;margin-left: 0px;"><label for="fos_user_registration_form_email" class="required">Nom*</label> {{ form_widget(form.nom) }}</div>
+    <div style="margin-top: -75px;width: 133px;margin-left: 175px;"><label for="fos_user_registration_form_email" class="required">Prénom*</label> {{ form_widget(form.prenom) }}</div>
+    </div>
+    <div><label for="fos_user_registration_form_email" class="required">Pseudo*</label> {{ form_widget(form.username) }}</div>
+    <div><label for="fos_user_registration_form_email" class="required">Adresse e-mail*</label> {{ form_widget(form.email) }}</div>
+    <div><label for="fos_user_registration_form_email" class="required">Mot de passe*</label> {{ form_widget(form.plainPassword.first) }}</div>
+    <div><label for="fos_user_registration_form_email" class="required">Confirmez votre mot de passe</label> {{ form_widget(form.plainPassword.second) }}</div>
+
+
+
+    <div>
+    <button type="submit" class="button button-block" value="{{ 'registration.submit'|trans }}" style="margin-left: 0px;"/>Commencer</button>
+
+{{ form_end(form) }}
+</div>
+</div>
+</div>
+{% javascripts
+'bundles/idplatform/js/jsForm.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+
+
+
+
+{% endjavascripts %}

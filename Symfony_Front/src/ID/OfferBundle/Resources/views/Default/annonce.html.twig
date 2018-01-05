@@ -1,0 +1,32 @@
+{# app/Resources/views/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+    {% block title %}Platforme de Recherche de Stage à l'UCBL{% endblock %}
+
+{% block content %}
+{% block body %}
+    {% include 'IDPlatformBundle:Outils:bar.html.twig' %}
+    {% include 'IDPlatformBundle:Outils:menu.html.twig' %}
+    <div class="container">
+        <div class="clip-text clip-text_twelve clip-text--cover" style="margin-left: 272px;margin-top: -52px;">Alternances</div>
+
+        <div class="container-fluid">
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-primary">Trier&nbsp;&nbsp;<i class="fa fa-sort" aria-hidden="true"></i></button>
+                <label for="sel1"></label>
+            </div>
+        </div>
+        <hr>
+
+        {% include 'IDOfferBundle:Default:index.html.twig' %}
+        {# Déplacer ce qu'il y a après dans la grosse boucle pour modifier le modal et modifier les champs par {{ offer.title, profil, nom entreprise etc... }}#}
+{% endblock %}
+    {% block footer %}
+        <footer>
+            <p style="color: black;">Imad Eddine DJEBARNI © {{ 'now'|date('N M Y') }} in UCBL</p>
+        </footer>
+    {% endblock %}
+{% endblock %}
+
+
+

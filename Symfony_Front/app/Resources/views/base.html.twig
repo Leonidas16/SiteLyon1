@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    {% stylesheets
+    'bundles/idplatform/css/style.css'
+    'bundles/idplatform/css/styleFormInscription.css'
+    'bundles/idplatform/css2/style.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    {% endstylesheets %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+{% block body %}
+{% endblock %}
+{% javascripts
+'bundles/idplatform/js/jquery.min.js'
+'bundles/idplatform/js/bootstrap.min.js'
+'bundles/idplatform/js/index.js'
+'bundles/idplatform/js/function.js'
+'bundles/idplatform/js/background.js'
+%}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+</body>
+</html>

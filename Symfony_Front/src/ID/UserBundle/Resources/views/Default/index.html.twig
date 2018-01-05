@@ -1,0 +1,23 @@
+{% extends "@FOSUser/layout.html.twig" %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block content %}
+    {% block fos_user_content %}
+        <head>
+            <meta charset="UTF-8">
+            <title>S'inscrire</title>
+
+        </head>
+        <body>
+        <!--Fond d'ecran-->
+        <img src="{{ asset('bundles/idplatform/images/background.jpg') }} "class="superbg" />
+
+        {{ login|raw }}
+        {{ register|raw }}
+
+
+
+
+    {% endblock %}
+{% endblock %}

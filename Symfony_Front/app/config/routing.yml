@@ -1,0 +1,22 @@
+id_offer:
+    resource: "@IDOfferBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+id_user:
+    resource: "@IDUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+id_platform:
+    resource: "@IDPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+l3_logout:
+    path:     /quit
+    defaults: { _controller: L3CasBundle:Logout:logout }

@@ -1,0 +1,10 @@
+.fos_user_change_password
+{
+    margin-left:240px;
+}
+
+label.required
+{
+    color:black;
+    margin-left:-240px;
+}

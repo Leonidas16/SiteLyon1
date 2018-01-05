@@ -1,0 +1,29 @@
+{# app/Resources/views/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+    {% block title %}Platforme de Recherche de Stage à l'UCBL{% endblock %}
+
+
+{% block body %}
+{% include 'IDPlatformBundle:Outils:bar.html.twig' %}
+{% include 'IDPlatformBundle:Outils:menu.html.twig' %}
+<body>
+    <div class="container">
+    <div class="clip-text clip-text_twelve clip-text--cover" style="margin-left: 330px;margin-top: -52px;">Accueil</div>
+
+    <h4 style="margin-left: 387px;">Dernières annonces visitées</h4>
+
+
+        {% include 'IDOfferBundle:Default:index.html.twig' %}
+
+
+    </div>
+
+</body>
+
+    {% block footer %}
+        <footer>
+            <p style="color: black;">Imad Eddine DJEBARNI © {{ 'now'|date('N M Y') }} in UCBL</p>
+        </footer>
+    {% endblock %}
+{% endblock %}
